@@ -1,0 +1,14 @@
+<h2 mat-dialog-title>{{data.title || 'Mensaje'}}</h2>
+<mat-dialog-content>
+  <div [ngClass]="classCSS">
+    <div class="dialog-icon" *ngIf="icon"><mat-icon>{{icon}}</mat-icon></div>
+    <div [innerHtml]="data.message"></div>
+  </div>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <div class="pull-right">
+    <button mat-raised-button [mat-dialog-close]="true" color="primary">
+      <mat-icon>check_circle</mat-icon> Aceptar
+    </button>
+  </div>
+</mat-dialog-actions>

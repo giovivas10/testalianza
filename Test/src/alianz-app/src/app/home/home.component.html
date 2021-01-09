@@ -1,0 +1,65 @@
+<div class="example-container" [class.example-is-mobile]="mobileQuery.matches">
+  <mat-toolbar color="primary" class="example-toolbar">
+    <button mat-icon-button (click)="snav.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <h1 class="example-app-name">Alianza</h1>
+  </mat-toolbar>
+
+  <mat-sidenav-container style="height: 850px;" class="example-sidenav-container"
+    [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
+    <mat-sidenav #snav opened [mode]="mobileQuery.matches ? 'over' : 'side'" [fixedInViewport]="mobileQuery.matches"
+      fixedTopGap="56">
+      <mat-nav-list>
+        <a mat-list-item routerLink=".">Clientes</a>
+        <a mat-list-item routerLink=".">Client look history</a>
+        <a mat-list-item routerLink=".">Emergency PIN Configuration</a>
+        <a mat-list-item routerLink=".">Emergency PIN History</a>
+
+      </mat-nav-list>
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+      <div style="padding: 2%;">
+
+        <div class="example-button-row">
+          <button mat-raised-button>New</button>
+          <button mat-raised-button color="primary">Export</button>
+        </div>
+
+        <h2>Clients</h2>
+
+        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+          
+          <ng-container matColumnDef="SharedKey">
+            <th mat-header-cell *matHeaderCellDef> Shared Key. </th>
+            <td mat-cell *matCellDef="let element"> {{element.SharedKey}} </td>
+          </ng-container>
+          
+          <ng-container matColumnDef="BussinesId">
+            <th mat-header-cell *matHeaderCellDef> Bussines Id </th>
+            <td mat-cell *matCellDef="let element"> {{element.BussinesId}} </td>
+          </ng-container>
+          
+          <ng-container matColumnDef="Email">
+            <th mat-header-cell *matHeaderCellDef> E-mail </th>
+            <td mat-cell *matCellDef="let element"> {{element.Email}} </td>
+          </ng-container>
+
+          <ng-container matColumnDef="Phone">
+            <th mat-header-cell *matHeaderCellDef> Phone </th>
+            <td mat-cell *matCellDef="let element"> {{element.Phone}} </td>
+          </ng-container>
+
+          <ng-container matColumnDef="DataAdded">
+            <th mat-header-cell *matHeaderCellDef> Data Added </th>
+            <td mat-cell *matCellDef="let element"> {{element.DataAdded | date:'short' }} </td>
+          </ng-container>
+
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>

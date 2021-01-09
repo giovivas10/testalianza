@@ -1,0 +1,32 @@
+test:
+  alianza:
+    debug: true
+    schema: test
+thorntail:
+  https:
+    certificate:
+      generate: true
+    port: 8451
+  http:
+    port: 8091
+  management:
+    http:
+      port: 9091
+    https:
+      port: 9092
+  datasources:
+    data-sources:
+      TestDS:
+        driver-name: postgresql
+        jndi-name: java:jboss/datasources/TestDS
+        connection-url: jdbc:postgresql://localhost:5432/postgres
+        user-name: postgres
+        password: postgres
+        valid-connection-checker-class-name: org.jboss.jca.adapters.jdbc.extensions.postgres.PostgreSQLValidConnectionChecker
+        validate-on-match: true
+        background-validation: false
+        exception-sorter-class-name: org.jboss.jca.adapters.jdbc.extensions.postgres.PostgreSQLExceptionSorter
+        hibernate.connection.ssl: true
+        hibernate.connection.sslfactory: org.postgresql.ssl.NonValidatingFactory
+        sslfactory: org.postgresql.ssl.NonValidatingFactory
+        hibernate.jdbc.use_streams_for_binary: false

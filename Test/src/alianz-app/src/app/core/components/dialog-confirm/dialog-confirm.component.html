@@ -1,0 +1,14 @@
+<h2 mat-dialog-title>{{data.title || 'Confirmación'}}</h2>
+<mat-dialog-content>
+  <p [innerHtml]="data.message || '¿Realmente desea continuar?'"></p>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <div class="pull-right">
+    <button mat-button [mat-dialog-close]="false">
+      <mat-icon>clear</mat-icon> Cancelar
+    </button>
+    <button mat-raised-button color="primary" [mat-dialog-close]="true">
+      <mat-icon>check_circle</mat-icon> Aceptar
+    </button>
+  </div>
+</mat-dialog-actions>

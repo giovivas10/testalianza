@@ -1,0 +1,28 @@
+.container {
+    margin: 0;
+    padding: 0;
+    background-color: #EEEEEE;
+}
+
+.menu {
+    margin-top: 0 !important;
+    background-color: #EEEEEE;
+    max-width: 23%;
+}
+
+.parking-link {
+    color: #FFF;
+    text-decoration: none;
+}
+
+.version {
+    font-size: medium;
+}
+
+.sidenav-content {
+    padding: 2em !important;
+}
+
+.thumbnail{
+    
+}

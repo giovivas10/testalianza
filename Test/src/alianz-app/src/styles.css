@@ -1,0 +1,250 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* @import "~@angular/material/prebuilt-themes/indigo-pink.css"; */
+
+body {
+    margin: 0 0 0 0 !important;
+    background-color: #EEEEEE;
+    font-size: 14px;
+    font-weight: unset;
+    font-family: 'Calibri';
+}
+
+.hidden {
+    overflow: hidden;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.row {
+    width: 100%;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.col {
+    clear: both;
+}
+
+.col-1 {
+    float: left;
+    width: 75%;
+}
+
+.col-2 {
+    float: left;
+    width: 50%;
+}
+
+.col-3 {
+    float: left;
+    width: 30%;
+}
+
+.col-4 {
+    float: left;
+    width: 25%;
+}
+
+.pull-right {
+    float: right;
+    width: 100%;
+    text-align: right;
+}
+
+.options-tools {
+    float: right;
+    text-align: right;
+}
+
+.m-t {
+    margin-top: 10px;
+}
+
+.m-r {
+    margin-right: 10px;
+}
+
+.m-l {
+    margin-left: 10px;
+}
+
+.m-b {
+    margin-bottom: 10px;
+}
+
+.p-r {
+    padding-right: 10px;
+}
+
+.content-card {
+    margin: 10px;
+}
+
+.success {
+    padding: 20px;
+    background-color: #4CAF50;
+    color: white;
+    margin-bottom: 15px;
+    overflow: auto;
+}
+
+.alert {
+    padding: 20px;
+    background-color: #f44336;
+    color: white;
+    margin-bottom: 15px;
+    overflow: auto;
+}
+
+.default {
+    padding: 20px;
+    background-color: #EEEEEE;
+    color: black;
+    margin-bottom: 15px;
+    overflow: auto;
+}
+
+.alert-label {
+    padding: 2px 5px;
+    background-color: #f44336;
+    color: white;
+    font-size: 14px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.primary-label {
+    padding: 2px 5px;
+    background-color: #26418f;
+    color: white;
+    font-size: 14px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    font-weight: 600;
+    float: right;
+}
+
+.accent-label {
+    padding: 2px 5px;
+    background-color: #f8ac59;
+    color: white;
+    font-size: 14px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    font-weight: 600;
+    float: right;
+}
+
+.chip {
+    padding: 6px 0px 7px 7px;
+    margin-right: 1px;
+    border: #E2E2E2 solid thin;
+    background-color: #EEEEEE;
+    color: #000;
+    font-size: 14px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.hr {
+    clear: both;
+    border-bottom: #EEEEEE solid 1px;
+    padding-top: 10px;
+    margin-bottom: 10px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-small {
+    font-size: 14px;
+}
+
+table {
+    width: 100%;
+}
+
+table tbody tr:hover {
+    background-color: #EEEEEE;
+}
+
+.table-container {
+    position: relative;
+    max-height: 50vh;
+    overflow: auto;
+}
+
+.form-section {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    height: 60px; 
+}
+
+.form-container  > * {
+    width: 100%;
+}
+
+.form-footer {
+    text-align: right;
+}
+
+.form-footer > button {
+    width: 150px;
+    margin-left: 5px;
+}
+
+.list-panel {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+  
+.list-panel li {
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+}
+  
+.list-panel li:hover {
+    background: #f6f6f6;
+}
+
+.card {
+    margin: 1em;
+    background-color: white;
+    transition: 0.3s;
+    color: gray;
+}
+
+.card-header {
+    padding: 1em;
+    background-color: white;
+    box-shadow: 0 1px 4px 0 rgba(0,0,0,0.2);
+    font-weight: bold;
+}
+
+.card-body {
+    padding: 1em;
+    background-color: white;
+    box-shadow: 0 1px 4px 0 rgba(0,0,0,0.2);
+}
+
+.quantity-regs {
+    font-size: large;
+}

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.1"
+             xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+             xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+
+
+    <persistence-unit name="TestDS" transaction-type="JTA">
+
+        <jta-data-source>java:jboss/datasources/TestDS</jta-data-source>
+        <class>com.test.bean.Client</class>
+
+        <!-- If you are running in a production environment, add a managed data source, the example data source is just for proofs of concept! -->
+        <!-- <shared-cache-mode>ENABLE_SELECTIVE</shared-cache-mode> -->
+
+        <properties>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQL95Dialect"/>
+            <property name="hibernate.format_sql" value="true"/>
+            <property name="hibernate.show_sql" value="false"/>
+            <property name="hibernate.archive.autodetection" value="class, hbm"/>
+            <property name="hibernate.jdbc.use_streams_for_binary" value="false"/>
+            <property name="hibernate.id.new_generator_mappings" value="false"/>
+            <property name="connection_pool_size" value="10"/>
+            <property name="hibernate.hbm2ddl.auto" value="validate"/>
+            <property name="hibernate.current_session_context_class" value="thread"/>
+            <property name="hibernate.default_schema" value="${test.alianza.schema}"/>
+        </properties>
+
+    </persistence-unit>
+</persistence>
